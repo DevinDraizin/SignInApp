@@ -1,0 +1,46 @@
+.root
+{
+    -fx-background-color: #415F83;
+}
+
+.label
+{
+    -fx-font-size: 24;
+    -fx-text-fill: white;
+}
+
+.content-label
+ {
+     -fx-font-size: 18;
+     -fx-text-fill: white;
+ }
+
+.data-label
+{
+    -fx-font-size: 18;
+    -fx-text-fill: #7fdeff;
+}
+
+.header-label
+{
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-border-color: #7fdeff;
+    -fx-label-padding: 6,6,6,6;
+    -fx-border-radius: 10 10 10 10;
+
+}
+
+.info-label
+{
+    -fx-text-fill: #7fdeff;
+    -fx-alignment: center;
+    -fx-font-size: 14;
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-background-color: #5197d5
+}

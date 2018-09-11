@@ -1,0 +1,133 @@
+.root
+{
+	-fx-background-color: #415F83;
+}
+
+
+.name-label
+{
+    -fx-font-size: 18;
+    -fx-text-fill: #7fdeff;
+}
+
+.content-label
+{
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.header-label
+{
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-border-color: #7fdeff;
+    -fx-label-padding: 10,10,10,10;
+    -fx-border-radius: 10 10 10 10;
+    -fx-alignment: center;
+
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-color: #5197d5
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #2b3d55;
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #2b3d55;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler{
+    -jfx-rippler-fill: #dde5ee;
+}
+
+.jfx-tab-pane .tab-selected-line {
+    -fx-background-color: #7fdeff;
+}
+
+.jfx-tab-pane .tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+.jfx-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #7fdeff;
+}
+
+
+.jfx-date-picker {
+    -jfx-default-color: #5197d5;
+    -fx-text-inner-color: white;
+    -fx-font-size: 20;
+}
+
+.jfx-date-picker > .jfx-text-field {
+
+    -jfx-unfocus-color: white;
+    -fx-alignment: center;
+}
+
+.jfx-time-picker {
+    -jfx-default-color: #5197d5;
+    -fx-text-inner-color: white;
+    -fx-font-size: 20;
+}
+
+.jfx-time-picker > .jfx-text-field {
+
+    -jfx-unfocus-color: white;
+    -fx-alignment: center;
+}
+
+
+
+.jfx-list-cell {
+
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-alignment: center;
+}
+
+
+
+.jfx-list-cell:filled:hover,
+.jfx-list-cell:selected .label {
+    -fx-text-fill: #bcc9dc;
+}
+
+
+.jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.jfx-list-cell:even:selected > .jfx-rippler > StackPane {
+    -fx-background-color: rgba(188, 201, 220, 0.2);
+}
+
+
+.jfx-list-cell .jfx-rippler {
+    -jfx-rippler-fill: #dde5ee;
+}
+
+
+.jfx-list-cell:odd {
+    -fx-background-color: #344865;
+}
+
+
+.jfx-list-cell:even {
+    -fx-background-color: #3d5476;
+}
+
+
+
+.jfx-check-box {
+    -jfx-checked-color: #7fdeff;
+    -jfx-unchecked-color: #7fdeff;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+}
+

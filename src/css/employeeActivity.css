@@ -1,0 +1,90 @@
+.root
+{
+    -fx-background-color: #415F83;
+}
+
+.label
+{
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.header-label
+{
+    -fx-font-size: 28;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.number-label
+{
+    -fx-text-fill: #7fdeff;
+    -fx-alignment: center;
+    -fx-font-size: 18;
+}
+
+.descriptions
+{
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-border-color: #7fdeff;
+    -fx-label-padding: 6,6,6,6;
+    -fx-border-radius: 10 10 10 10;
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-color: #5197d5
+}
+
+.jfx-check-box .box,.jfx-check-box:indeterminate .box,.jfx-check-box:indeterminate:selected .box
+{
+    -fx-border-color: White;
+}
+
+
+.jfx-check-box:selected .box {
+    -fx-border-color: -jfx-checked-color;
+}
+
+.jfx-check-box {
+    -jfx-checked-color: #7fdeff;
+    -jfx-unchecked-color: #7fdeff;
+    -fx-text-fill: white;
+}
+
+.scroll-pane
+{
+    -fx-background-color: #415F83;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #5197d5;
+    -fx-background-radius: 5em;
+}
+

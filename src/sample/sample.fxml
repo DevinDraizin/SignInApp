@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <BorderPane fx:id="adminPanel" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #415F83;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #404859;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="6.0" left="26.0" top="16.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Admin Panel" textFill="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox spacing="6.0">
+                     <children>
+                        <JFXButton fx:id="returnHome" onAction="#setHomeScreen" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="settingsButton" layoutX="10.0" layoutY="48.0" onAction="#getSettings" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Settings" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <left>
+            <VBox spacing="4.0">
+               <children>
+                  <JFXTextField fx:id="searchBar" focusColor="#7fdeff" onKeyReleased="#searchList" promptText="Search" style="-fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;" unFocusColor="#bdbdbd">
+                     <font>
+                        <Font size="16.0" />
+                     </font></JFXTextField>
+                  <JFXListView fx:id="sideList" onMouseClicked="#displaySelect" prefWidth="225.0" style="-fx-control-inner-background: #9BAEBE;" VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="26.0" left="60.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <HBox alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" spacing="4.0" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Label text="Start:" textFill="#5197d5">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="startDate" defaultColor="#5197d5" editable="false" onAction="#dateChangeListener" style="-fx-text-inner-color: #ffffff; -jfx-unfocus-color: #ffffff; -fx-font-size: 16;" />
+                              <Label text="End:" textFill="#5197d5">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="endDate" defaultColor="#5197d5" editable="false" onAction="#dateChangeListener" style="-fx-text-inner-color: #ffffff; -jfx-unfocus-color: #ffffff; -fx-font-size: 16;" />
+                              <Region layoutX="304.0" layoutY="10.0" />
+                              <JFXButton onAction="#calcReport" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Calculate Report" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="editDayButton" onAction="#editDay" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Modify Dates" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Label text="Employee Data Sheet" textFill="#5197d5">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="26.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TableView fx:id="adminTable" stylesheets="@../css/table.css" HBox.hgrow="ALWAYS" />
+                              <VBox alignment="TOP_CENTER" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="4.0">
+                                       <children>
+                                          <Label text="ID Number" textFill="#5197d5">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField fx:id="IDField" editable="false" focusColor="#7fdeff" promptText="Employee ID" style="-fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;" unFocusColor="#bdbdbd">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <JFXButton fx:id="setID" onAction="#getID" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="4.0">
+                                       <children>
+                                          <Label text="First Name" textFill="#5197d5">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <JFXTextField fx:id="firstNameField" editable="false" focusColor="#7fdeff" promptText="First Name" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="#bdbdbd">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton fx:id="setFirst" onAction="#getFirst" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="4.0">
+                                       <children>
+                                          <Label text="Last Name" textFill="#5197d5">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <JFXTextField fx:id="lastNameField" editable="false" focusColor="#7fdeff" promptText="Last Name" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="#bdbdbd">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton fx:id="setLast" onAction="#getLast" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="4.0">
+                                       <children>
+                                          <Label text="Salary" textFill="#5197d5">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <JFXTextField fx:id="salaryField" editable="false" focusColor="#7fdeff" promptText="Salary" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="#bdbdbd">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton fx:id="setSalary" onAction="#getSalary" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="121.0" spacing="4.0">
+                                       <children>
+                                          <Label text="Phone" textFill="#5197d5">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <JFXTextField fx:id="phoneField" editable="false" focusColor="#7fdeff" promptText="Phone Number" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="#bdbdbd">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton fx:id="setPhone" onAction="#getPhone" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="178.0" spacing="4.0">
+                                       <children>
+                                          <Label text="Email" textFill="#5197d5">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <JFXTextField fx:id="emailField" editable="false" focusColor="#7fdeff" promptText="Email" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="#bdbdbd">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton fx:id="setEmail" onAction="#getEmail" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="CENTER_RIGHT">
+                                       <children>
+                                          <Label alignment="CENTER" text="Employee Notes" textFill="#5197d5">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="4.0" right="40.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox alignment="CENTER_RIGHT" spacing="4.0">
+                                             <children>
+                                                <VBox spacing="4.0">
+                                                   <children>
+                                                      <JFXButton fx:id="setNotes" onAction="#getNotes" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Edit" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="clearNotes" onAction="#clearNoteText" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Clear" textFill="WHITE" visible="false">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="jokeButton" layoutX="10.0" layoutY="42.0" onAction="#setJoke" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Joke" textFill="WHITE" visible="false">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </VBox>
+                                                <JFXTextArea fx:id="notesField" editable="false" focusColor="#7fdeff" prefHeight="200.0" prefWidth="200.0" promptText="Notes" style="-fx-prompt-text-fill: #C4C7CB; -fx-text-fill: #ffffff;" unFocusColor="#bdbdbd" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </JFXTextArea>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <JFXCheckBox fx:id="notifyCheck" onAction="#sendNotify" stylesheets="@../css/checkBoxHax.css" text="Notify Employee" textFill="WHITE" unCheckedColor="#7fdeff">
+                                             <padding>
+                                                <Insets right="40.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                    <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets top="12.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="26.0" left="8.0" right="60.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="homePanel" layoutX="179.0" layoutY="82.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #415F83;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <StackPane>
+                     <children>
+                        <ImageView fitHeight="127.0" fitWidth="368.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets bottom="8.0" top="10.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label fx:id="dateLabel" onMouseClicked="#initDateLabel" text="Label" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Label text="Heads Up" textFill="#d5d5d5" visible="false" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Kai Regular" size="56.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets top="20.0" />
+                                 </BorderPane.margin>
+                                 <HBox.margin>
+                                    <Insets right="174.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Region HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Region>
+                              <JFXButton fx:id="admin" onAction="#requestAdmin" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Admin" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="Sign In:" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <BorderPane.margin>
+                              <Insets top="20.0" />
+                           </BorderPane.margin>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="20.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #9099A2;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Region prefHeight="200.0" prefWidth="200.0" />
+                        <JFXTextField fx:id="input" alignment="CENTER" focusColor="#7fdeff" promptText="Please Enter ID:" style="-fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;" unFocusColor="#bdbdbd">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </JFXTextField>
+                        <Region prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="signIn" onAction="#signIn" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Sign In" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="breakButton" onAction="#pause" ripplerFill="#7fdeff" style="-fx-background-color: #5197d5;" text="Break" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="timeSheetButton" onAction="#getTimeSheet" ripplerFill="#80dfff" style="-fx-background-color: #5197d5;" text="Time Sheet" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="signOutButton" onAction="#signOut" ripplerFill="#ffc5c5" style="-fx-background-color: #d34545;" text="Sign Out" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="60.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <Label text="FJ62WI7M62GW8WKSCSKWWKKOC4008G804WS8CCSG" BorderPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

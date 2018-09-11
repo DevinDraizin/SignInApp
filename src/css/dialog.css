@@ -1,0 +1,17 @@
+.myDialog{
+
+}
+.myDialog > *.button-bar > *.container{
+
+}
+.myDialog > *.label.content{
+    -fx-font-size: 22px;
+}
+.myDialog:header *.header-panel{
+
+-fx-font-size: 22px;
+
+}
+.myDialog:header *.header-panel *.label{
+    -fx-font-size: 22px;
+}

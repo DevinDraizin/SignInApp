@@ -1,0 +1,56 @@
+.root
+{
+    -fx-background-color: #415F83;
+}
+
+.header-label
+{
+    -fx-font-size: 24;
+    -fx-text-fill: white;
+    -fx-border-color: #7fdeff;
+    -fx-label-padding: 6,6,6,6;
+    -fx-border-radius: 10 10 10 10;
+
+}
+
+
+
+.email-label
+{
+    -fx-text-fill: #7fdeff;
+    -fx-alignment: center;
+    -fx-font-size: 20;
+}
+
+.label
+{
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-background-color: #5197d5
+}
+
+.jfx-check-box {
+    -fx-font-size: 18;
+    -jfx-checked-color: #7fdeff;
+    -jfx-unchecked-color: #7fdeff;
+    -fx-text-fill: white;
+}
+
+.jfx-text-field
+{
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+
+    -jfx-focus-color: #7fdeff;
+    -jfx-unfocus-color: #bdbdbd;
+    -fx-prompt-text-fill: white;
+}
+
+
+

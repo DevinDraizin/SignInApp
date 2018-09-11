@@ -1,0 +1,67 @@
+.border-pane
+{
+    -fx-background-color: #415F83;
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-background-color: #5197d5;
+    -jfx-rippler-fill: #7fdeff;
+}
+
+
+.jfx-text-field
+{
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+
+    -jfx-focus-color: #7fdeff;
+    -jfx-unfocus-color: #bdbdbd;
+    -fx-prompt-text-fill: white;
+}
+
+
+.label
+{
+    -fx-font-size: 48px;
+    -fx-text-fill: white;
+}
+
+
+.combo-box
+{
+    -jfx-focus-color: #7fdeff;
+    -jfx-unfocus-color: white;
+    -fx-font-size: 18px;
+}
+
+.combo-box-base .text{
+    -fx-fill: white;
+}
+
+.combo-box .arrow-button .arrow
+{
+    -fx-background-color: #7fdeff;
+}
+
+.combo-box-popup .list-view .jfx-list-cell:even {
+    -fx-background-color: #9BAEBE;
+}
+
+.combo-box-popup .list-view .jfx-list-cell:odd{
+    -fx-background-color: #7F8F9C;
+}
+
+
+
+
+.combo-box-popup .list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.combo-box-popup .list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
+    -fx-background-color: #5197d5;
+}
+
+
+
+

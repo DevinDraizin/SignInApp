@@ -1,0 +1,43 @@
+.root
+{
+    -fx-background-color: #415F83;
+    -fx-padding: 20;
+}
+
+.reg-label
+{
+    -fx-font-size: 18;
+    -fx-text-fill: white; /*#061A40*/
+}
+
+.desc-label
+{
+    -fx-font-size: 16;
+    -fx-background-color: #415F83;
+    -fx-text-fill: white;
+}
+
+.data-label
+{
+    -fx-font-size: 18;
+    -fx-text-fill: #7fdeff;
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-background-color: #5197d5
+}
+
+.jfx-date-picker {
+    -jfx-default-color: #5197d5;
+    -fx-text-inner-color: white;
+    -fx-font-size: 18;
+}
+
+.jfx-date-picker > .jfx-text-field {
+
+    -jfx-unfocus-color: white;
+    -fx-alignment: center;
+}

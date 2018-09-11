@@ -1,0 +1,27 @@
+.root
+{
+    -fx-background-color: #415F83;
+    -fx-border-color: darkslateblue;
+}
+
+.jfx-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-color:  #5197d5;
+    -jfx-rippler-fill: #7fdeff;
+}
+
+.jfx-toggle-button
+{
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -jfx-toggle-color: #5197d5;
+    -jfx-toggle-line-color: #7fdeff;
+}
+
+.label
+{
+    -fx-font-size: 38px;
+    -fx-text-fill: white;
+}

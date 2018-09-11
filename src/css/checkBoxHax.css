@@ -1,0 +1,11 @@
+.jfx-check-box .box,.jfx-check-box:indeterminate .box,.jfx-check-box:indeterminate:selected .box
+{
+    -fx-border-color: White;
+}
+
+
+.jfx-check-box:selected .box {
+    -fx-border-color: -jfx-checked-color;
+}
+
+
